@@ -138,7 +138,6 @@
         //selecter element to add grains
         selectorElement = '#' + elementId + '::before';
 
-
         addCSSRule(style.sheet, selectorElement, rule);
         
         return style;
