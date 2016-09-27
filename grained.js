@@ -16,7 +16,8 @@
 
         if (typeof ele === 'string') {
             element = doc.getElementById(ele.split('#')[1]);
-        }
+        } else if (typeof ele === 'object')
+            element = ele
 
         if (!element) {
             console.error('Grained: cannot find the element with id ' + ele);
