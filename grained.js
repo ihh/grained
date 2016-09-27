@@ -141,7 +141,7 @@
 
         addCSSRule(style.sheet, selectorElement, rule);
 
-
+        return style;
     }
 
     window.grained = grained;
