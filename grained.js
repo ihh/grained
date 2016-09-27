@@ -106,12 +106,14 @@
         if (animationAdded) {
             animationAdded.parentElement.removeChild(animationAdded);
         }
+        var styles = []
         var style = doc.createElement("style");
         style.type = "text/css";
         style.id = 'grained-animation';
         style.innerHTML = animation;
         doc.body.appendChild(style);
-
+        styles.push (style)
+        
         //add custimozed style
         var styleAdded = doc.getElementById('grained-animation-' + elementId);
         if (styleAdded) {
@@ -122,6 +124,7 @@
         style.type = "text/css";
         style.id = 'grained-animation-' + elementId;
         doc.body.appendChild(style);
+        styles.push (style)
 
         var rule = 'background-image: url(' + noise + ');';
         rule += 'position: absolute;content: "";height: 300%;width: 300%;left: -100%;top: -100%;';
@@ -140,7 +143,7 @@
 
         addCSSRule(style.sheet, selectorElement, rule);
         
-        return style;
+        return styles;
     }
 
     window.grained = grained;
