@@ -27,7 +27,7 @@
         }
 
         //set style for parent
-        if (element.style.position !== 'absolute') {
+        if (window.getComputedStyle(element).position !== 'absolute') {
             element.style.position = 'relative';
         }
         element.style.overflow = 'hidden';
