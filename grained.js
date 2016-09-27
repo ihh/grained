@@ -140,7 +140,7 @@
 
 
         addCSSRule(style.sheet, selectorElement, rule);
-
+        
         return style;
     }
 
